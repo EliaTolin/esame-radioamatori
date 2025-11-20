@@ -26,10 +26,11 @@ def generate_transformer():
         # Labels for currents/voltages: draw the figure then add text via the figure API
         d.draw(show=False)
         # schemdraw Figure.text expects signature text(s, x, y, ...)
-        d.fig.text('Ip ->', 0.5, 0, color='blue', halign='left', valign='center')
-        d.fig.text('-> Is', 5.5, 0, color='blue', halign='right', valign='center')
-        d.fig.text('Tensione\nIngresso', 0, 2, halign='right', valign='center')
-        d.fig.text('Tensione\nUscita', 6, 2, halign='left', valign='center')
+        # place current labels closer to the coils and voltage labels above each side
+        d.fig.text('Ip →', 1.0, 0.6, color='blue', halign='left', valign='center')
+        d.fig.text('Is ←', 5.0, 0.6, color='blue', halign='right', valign='center')
+        d.fig.text('Tensione\nIngresso', 1.0, 1.9, halign='center', valign='bottom')
+        d.fig.text('Tensione\nUscita', 5.0, 1.9, halign='center', valign='bottom')
 
 def generate_transistor_amp():
     print("Generating Transistor Amplifier diagram...")
@@ -74,7 +75,8 @@ def generate_transistor_amp():
         d += elm.Capacitor().right().at(collector_node).label('Cout')
         d += elm.Resistor().down().label('RL')
         d += elm.Ground()
-        d += elm.Line().right().at(collector_node).length(0.5).label('Vout\n(Segnale Uscita)', loc='right')
+        # extend the Vout tap a bit further to improve label placement
+        d += elm.Line().right().at(collector_node).length(1.0).label('Vout\n(Segnale Uscita)', loc='right')
 
 def generate_diode_curve():
     print("Generating Diode I-V Curve...")
@@ -111,11 +113,11 @@ def generate_diode_curve():
     plt.ylabel('Corrente (mA)', fontsize=12)
     
     # Annotations
-    plt.annotate('Polarizzazione\nDiretta', xy=(0.7, 5), xytext=(0.2, 10),
+    plt.annotate('Polarizzazione\nDiretta', xy=(0.75, 6), xytext=(0.2, 12),
                  arrowprops={'facecolor': 'black', 'shrink': 0.05})
-    plt.annotate('Soglia ~0.7V', xy=(0.7, 0), xytext=(0.8, -5),
+    plt.annotate('Soglia ~0.7V', xy=(0.7, 0.5), xytext=(0.8, -6),
                  arrowprops={'facecolor': 'black', 'shrink': 0.05})
-    plt.annotate('Polarizzazione\nInversa', xy=(-1, 0), xytext=(-1.5, 5),
+    plt.annotate('Polarizzazione\nInversa', xy=(-1.2, -0.5), xytext=(-1.7, 7),
                  arrowprops={'facecolor': 'black', 'shrink': 0.05})
     
     plt.ylim(-10, 20)
@@ -152,8 +154,8 @@ def generate_capacitor_charge():
     plt.plot([0, 1], [tau_val, tau_val], 'g--')
     plt.plot(1, tau_val, 'go')
     
-    plt.annotate('63.2% Vmax\n(1 Costante di tempo)', xy=(1, tau_val), xytext=(1.5, tau_val - 2),
-                 arrowprops=dict(facecolor='black', shrink=0.05))
+    plt.annotate('63.2% Vmax\n(1 Costante di tempo)', xy=(1, tau_val), xytext=(1.2, tau_val - 3),
+                 arrowprops={'facecolor': 'black', 'shrink': 0.05})
     
     plt.xticks([0, 1, 2, 3, 4, 5], ['0', 'τ', '2τ', '3τ', '4τ', '5τ'])
     plt.legend()
@@ -161,9 +163,60 @@ def generate_capacitor_charge():
     plt.savefig('images/grafico_carica_condensatore.svg')
     plt.close()
 
+def generate_symbol_resistor():
+    """Generate a small SVG showing resistor symbols (zig-zag and IEC rectangle)."""
+    with schemdraw.Drawing(file='images/symbol_resistor.svg', show=False) as d:
+        d.config(unit=1.0)
+        # zig-zag style
+        d += elm.Resistor().left().label('R', loc='bottom')
+        # gap
+        d += elm.Line().right().length(1)
+        # IEC rectangle style: draw a box symbolically
+        d += elm.Line().right().length(0.3)
+        d += elm.RBox().right().label('R', loc='bottom')
+        d.draw(show=False)
+
+def generate_symbol_capacitor():
+    """Generate a small SVG with capacitor symbol."""
+    with schemdraw.Drawing(file='images/symbol_capacitor.svg', show=False) as d:
+        d += elm.Capacitor().label('C', loc='bottom')
+        d.draw(show=False)
+
+def generate_symbol_inductor():
+    """Generate a small SVG with inductor symbol."""
+    with schemdraw.Drawing(file='images/symbol_inductor.svg', show=False) as d:
+        d += elm.Inductor().label('L', loc='bottom')
+        d.draw(show=False)
+
+def generate_symbol_diode():
+    """Generate a small SVG with diode symbol."""
+    with schemdraw.Drawing(file='images/symbol_diode.svg', show=False) as d:
+        d += elm.Diode().label('D', loc='bottom')
+        d.draw(show=False)
+
+def generate_symbol_transistor():
+    """Generate a small SVG with generic BJT symbol."""
+    with schemdraw.Drawing(file='images/symbol_transistor.svg', show=False) as d:
+        d += elm.BjtNpn().label('Q', loc='bottom')
+        d.draw(show=False)
+
+def generate_symbol_ic():
+    """Generate a small SVG representing an integrated circuit package."""
+    with schemdraw.Drawing(file='images/symbol_ic.svg', show=False) as d:
+        # draw a small rectangle with pins
+        d += elm.RBox().label('IC', loc='center')
+        d.draw(show=False)
+
 if __name__ == "__main__":
     generate_transformer()
     generate_transistor_amp()
     generate_diode_curve()
     generate_capacitor_charge()
+    # Generate small symbol SVGs for chapter 02
+    generate_symbol_resistor()
+    generate_symbol_capacitor()
+    generate_symbol_inductor()
+    generate_symbol_diode()
+    generate_symbol_transistor()
+    generate_symbol_ic()
     print("All diagrams generated successfully.")
