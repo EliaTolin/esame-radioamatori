@@ -50,5 +50,5 @@ ax2.axvline(x=tau * 1000, color='green', linestyle=':', alpha=0.5, label=f'τ = 
 plt.tight_layout()
 
 # Salva l'immagine
-plt.savefig('/Users/giangio/Documents/GitHub/giangio/esame-radioamatori/images/grafico_condensatore_carica.png', dpi=150)
-print("Grafico salvato in images/grafico_condensatore_carica.png")
+plt.savefig('/Users/giangio/Documents/GitHub/giangio/esame-radioamatori/images/01_elettronica/grafico_condensatore_carica.png', dpi=150)
+print("Grafico salvato in images/01_elettronica/grafico_condensatore_carica.png")

@@ -8,10 +8,10 @@ import schemdraw.elements as elm
 import os
 
 def setup_output_directory():
-    """Crea la directory images se non esiste"""
-    if not os.path.exists('../images'):
-        os.makedirs('../images')
-    print("Directory images pronta")
+    """Crea la directory images/03_circuiti se non esiste"""
+    if not os.path.exists('../images/03_circuiti'):
+        os.makedirs('../images/03_circuiti')
+    print("Directory images/03_circuiti pronta")
 
 def draw_filter_circuits():
     """Disegna circuiti di filtri specifici"""
@@ -29,7 +29,7 @@ def draw_filter_circuits():
     d1 += elm.Label('V_out')
     d1 += elm.Resistor().label('R_L').down()
     d1 += elm.Ground()
-    d1.save('../images/filtro_passa_basso_lc_secondo.svg')
+    d1.save('../images/03_circuiti/filtro_passa_basso_lc_secondo.svg')
     
     # Filtro passa-alto LC di secondo ordine
     d2 = schemdraw.Drawing(unit=3)
@@ -44,7 +44,7 @@ def draw_filter_circuits():
     d2 += elm.Label('V_out')
     d2 += elm.Resistor().label('R_L').down()
     d2 += elm.Ground()
-    d2.save('../images/filtro_passa_alto_lc_secondo.svg')
+    d2.save('../images/03_circuiti/filtro_passa_alto_lc_secondo.svg')
     
     # Filtro a π
     d3 = schemdraw.Drawing(unit=3)
@@ -63,7 +63,7 @@ def draw_filter_circuits():
     d3 += elm.Label('V_out')
     d3 += elm.Resistor().label('R_L').down()
     d3 += elm.Ground()
-    d3.save('../images/filtro_pi.svg')
+    d3.save('../images/03_circuiti/filtro_pi.svg')
     
     print("Circuiti di filtri generati")
 
@@ -81,7 +81,7 @@ def draw_crystal_filter():
     d1 += elm.Resistor().label('R_m').right()
     d1 += elm.Line().down()
     d1 += elm.Line().left()
-    d1.save('../images/circuito_cristallo_quarzo.svg')
+    d1.save('../images/03_circuiti/circuito_cristallo_quarzo.svg')
     
     # Filtro a cristallo singolo
     d2 = schemdraw.Drawing(unit=3)
@@ -94,7 +94,7 @@ def draw_crystal_filter():
     d2 += elm.Label('V_out')
     d2 += elm.Capacitor().label('C_L').down()
     d2 += elm.Ground()
-    d2.save('../images/filtro_cristallo_singolo.svg')
+    d2.save('../images/03_circuiti/filtro_cristallo_singolo.svg')
     
     print("Circuiti a cristallo generati")
 
@@ -118,7 +118,7 @@ def draw_special_filters():
     d1 += elm.Ground()
     d1 += elm.Line().right()
     d1 += elm.Label('V_out_low')
-    d1.save('../images/filtro_crossover_audio.svg')
+    d1.save('../images/03_circuiti/filtro_crossover_audio.svg')
     
     # Filtro anti-aliasing
     d2 = schemdraw.Drawing(unit=3)
@@ -133,7 +133,7 @@ def draw_special_filters():
     d2 += elm.Ic().label('ADC').right()
     d2 += elm.Line().down()
     d2 += elm.Ground()
-    d2.save('../images/filtro_antialiasing.svg')
+    d2.save('../images/03_circuiti/filtro_antialiasing.svg')
     
     print("Filtri speciali generati")
 

@@ -8,10 +8,10 @@ import schemdraw.elements as elm
 import os
 
 def setup_output_directory():
-    """Crea la directory images se non esiste"""
-    if not os.path.exists('../images'):
-        os.makedirs('../images')
-    print("Directory images pronta")
+    """Crea la directory images/03_circuiti se non esiste"""
+    if not os.path.exists('../images/03_circuiti'):
+        os.makedirs('../images/03_circuiti')
+    print("Directory images/03_circuiti pronta")
 
 def draw_circuit_combinations():
     """Disegna circuiti di combinazione di componenti"""
@@ -29,7 +29,7 @@ def draw_circuit_combinations():
     d1 += elm.Label('V_out')
     d1 += elm.Resistor().label('R_L').down()
     d1 += elm.Ground()
-    d1.save('../images/circuito_trasformatore_accoppiamento.svg')
+    d1.save('../images/03_circuiti/circuito_trasformatore_accoppiamento.svg')
     
     # Circuito RLC parallelo
     d2 = schemdraw.Drawing(unit=3)
@@ -45,7 +45,7 @@ def draw_circuit_combinations():
     d2 += elm.Label('V_out')
     d2 += elm.Resistor().label('R_L').down()
     d2 += elm.Ground()
-    d2.save('../images/circuito_rlc_parallelo.svg')
+    d2.save('../images/03_circuiti/circuito_rlc_parallelo.svg')
     
     # Ponte di Wheatstone semplificato
     d3 = schemdraw.Drawing(unit=3)
@@ -62,7 +62,7 @@ def draw_circuit_combinations():
     d3 += elm.Label('V_out')
     d3 += elm.Resistor().label('R_L').down()
     d3 += elm.Ground()
-    d3.save('../images/circuito_ponte_wheatstone.svg')
+    d3.save('../images/03_circuiti/circuito_ponte_wheatstone.svg')
     
     print("Circuiti di combinazione generati")
 
@@ -79,7 +79,7 @@ def draw_filter_circuits():
     d1 += elm.Label('V_out')
     d1 += elm.Resistor().label('R_L').down()
     d1 += elm.Ground()
-    d1.save('../images/filtro_passa_basso_rc_dettagliato.svg')
+    d1.save('../images/03_circuiti/filtro_passa_basso_rc_dettagliato.svg')
     
     # Filtro passa-alto CR
     d2 = schemdraw.Drawing(unit=3)
@@ -91,7 +91,7 @@ def draw_filter_circuits():
     d2 += elm.Label('V_out')
     d2 += elm.Resistor().label('R_L').down()
     d2 += elm.Ground()
-    d2.save('../images/filtro_passa_alto_cr_dettagliato.svg')
+    d2.save('../images/03_circuiti/filtro_passa_alto_cr_dettagliato.svg')
     
     # Filtro passa-banda RLC
     d3 = schemdraw.Drawing(unit=3)
@@ -104,7 +104,7 @@ def draw_filter_circuits():
     d3 += elm.Label('V_out')
     d3 += elm.Resistor().label('R_L').down()
     d3 += elm.Ground()
-    d3.save('../images/filtro_passa_banda_rlc.svg')
+    d3.save('../images/03_circuiti/filtro_passa_banda_rlc.svg')
     
     print("Circuiti di filtri generati")
 
@@ -119,7 +119,7 @@ def draw_resonant_circuits():
     d1 += elm.Capacitor().label('C').right()
     d1 += elm.Line().down()
     d1 += elm.Line().left()
-    d1.save('../images/circuito_risonante_serie.svg')
+    d1.save('../images/03_circuiti/circuito_risonante_serie.svg')
     
     # Circuito risonante parallelo
     d2 = schemdraw.Drawing(unit=3)
@@ -133,7 +133,7 @@ def draw_resonant_circuits():
     d2 += elm.Ground()
     d2 += elm.Line().right()
     d2 += elm.Label('V_out')
-    d2.save('../images/circuito_risonante_parallelo.svg')
+    d2.save('../images/03_circuiti/circuito_risonante_parallelo.svg')
     
     # Circuito tank
     d3 = schemdraw.Drawing(unit=3)
@@ -146,7 +146,7 @@ def draw_resonant_circuits():
     d3 += elm.Ground()
     d3 += elm.Line().right()
     d3 += elm.Label('V_out')
-    d3.save('../images/circuito_tank.svg')
+    d3.save('../images/03_circuiti/circuito_tank.svg')
     
     print("Circuiti risonanti generati")
 
@@ -169,7 +169,7 @@ def draw_impedance_circuits():
     d1 += elm.Label('V_out')
     d1 += elm.Resistor().label('R_L').down()
     d1 += elm.Ground()
-    d1.save('../images/circuito_impedenza_complesso.svg')
+    d1.save('../images/03_circuiti/circuito_impedenza_complesso.svg')
     
     # Circuito di matching
     d2 = schemdraw.Drawing(unit=3)
@@ -181,7 +181,7 @@ def draw_impedance_circuits():
     d2 += elm.Line().right()
     d2 += elm.Resistor().label('R_load').down()
     d2 += elm.Ground()
-    d2.save('../images/circuito_matching_impedenza.svg')
+    d2.save('../images/03_circuiti/circuito_matching_impedenza.svg')
     
     print("Circuiti di impedenza generati")
 

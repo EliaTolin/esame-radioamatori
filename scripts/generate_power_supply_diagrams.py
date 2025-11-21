@@ -8,10 +8,10 @@ import schemdraw.elements as elm
 import os
 
 def setup_output_directory():
-    """Crea la directory images se non esiste"""
-    if not os.path.exists('../images'):
-        os.makedirs('../images')
-    print("Directory images pronta")
+    """Crea la directory images/03_circuiti se non esiste"""
+    if not os.path.exists('../images/03_circuiti'):
+        os.makedirs('../images/03_circuiti')
+    print("Directory images/03_circuiti pronta")
 
 def draw_power_supply_circuits():
     """Disegna circuiti di alimentazione"""
@@ -27,7 +27,7 @@ def draw_power_supply_circuits():
     d1 += elm.Label('V_out')
     d1 += elm.Resistor().label('R_L').down()
     d1 += elm.Ground()
-    d1.save('../images/raddrizzatore_semionda_filtro.svg')
+    d1.save('../images/03_circuiti/raddrizzatore_semionda_filtro.svg')
     
     # Alimentatore lineare completo
     d2 = schemdraw.Drawing(unit=3)
@@ -48,7 +48,7 @@ def draw_power_supply_circuits():
     d2 += elm.Label('V_out')
     d2 += elm.Resistor().label('R_L').down()
     d2 += elm.Ground()
-    d2.save('../images/alimentatore_lineare_completo.svg')
+    d2.save('../images/03_circuiti/alimentatore_lineare_completo.svg')
     
     # Regolatore lineare serie
     d3 = schemdraw.Drawing(unit=3)
@@ -63,7 +63,7 @@ def draw_power_supply_circuits():
     d3 += elm.Ground()
     d3 += elm.Capacitor().label('C_out').down()
     d3 += elm.Ground()
-    d3.save('../images/regolatore_lineare_serie.svg')
+    d3.save('../images/03_circuiti/regolatore_lineare_serie.svg')
     
     print("Circuiti di alimentazione generati")
 
@@ -83,7 +83,7 @@ def draw_switching_power_supply():
     d1 += elm.Label('V_out')
     d1 += elm.Resistor().label('R_L').down()
     d1 += elm.Ground()
-    d1.save('../images/convertitore_buck.svg')
+    d1.save('../images/03_circuiti/convertitore_buck.svg')
     
     # Convertitore boost (step-up)
     d2 = schemdraw.Drawing(unit=3)
@@ -98,7 +98,7 @@ def draw_switching_power_supply():
     d2 += elm.Label('V_out')
     d2 += elm.Resistor().label('R_L').down()
     d2 += elm.Ground()
-    d2.save('../images/convertitore_boost.svg')
+    d2.save('../images/03_circuiti/convertitore_boost.svg')
     
     print("Circuiti switching generati")
 
@@ -115,7 +115,7 @@ def draw_protection_circuits():
     d1 += elm.Label('V_out_protected')
     d1 += elm.Resistor().label('R_L').down()
     d1 += elm.Ground()
-    d1.save('../images/protezione_sovratensione.svg')
+    d1.save('../images/03_circuiti/protezione_sovratensione.svg')
     
     # Limitatore di corrente
     d2 = schemdraw.Drawing(unit=3)
@@ -127,7 +127,7 @@ def draw_protection_circuits():
     d2 += elm.Label('V_out')
     d2 += elm.Resistor().label('R_load').down()
     d2 += elm.Ground()
-    d2.save('../images/limitatore_corrente.svg')
+    d2.save('../images/03_circuiti/limitatore_corrente.svg')
     
     print("Circuiti di protezione generati")
 
@@ -145,7 +145,7 @@ def draw_battery_charger():
     d1 += elm.Label('V_out')
     d1 += elm.Capacitor().label('C_out').down()
     d1 += elm.Ground()
-    d1.save('../images/caricabatterie_liion.svg')
+    d1.save('../images/03_circuiti/caricabatterie_liion.svg')
     
     # Caricabatterie CC-CV semplificato
     d2 = schemdraw.Drawing(unit=3)
@@ -159,7 +159,7 @@ def draw_battery_charger():
     d2 += elm.Ground()
     d2 += elm.Line().right()
     d2 += elm.Label('V_out')
-    d2.save('../images/caricabatterie_cc_cv.svg')
+    d2.save('../images/03_circuiti/caricabatterie_cc_cv.svg')
     
     print("Circuiti di caricabatterie generati")
 

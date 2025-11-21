@@ -17,5 +17,5 @@ plt.legend()
 plt.tight_layout()
 
 # Salva l'immagine
-plt.savefig('/Users/giangio/Documents/GitHub/giangio/esame-radioamatori/images/grafico_resistore_vi.png', dpi=150)
-print("Grafico salvato in images/grafico_resistore_vi.png")
+plt.savefig('/Users/giangio/Documents/GitHub/giangio/esame-radioamatori/images/01_elettronica/grafico_resistore_vi.png', dpi=150)
+print("Grafico salvato in images/01_elettronica/grafico_resistore_vi.png")

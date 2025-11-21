@@ -10,10 +10,11 @@ import matplotlib.pyplot as plt
 import os
 
 def setup_output_directory():
-    """Crea la directory images se non esiste"""
-    if not os.path.exists('../images'):
-        os.makedirs('../images')
-    print("Directory images pronta")
+    """Crea la directory images/02_componenti se non esiste"""
+    output_dir = '../images/02_componenti'
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    print("Directory images/02_componenti pronta")
 
 def draw_resistor():
     """Disegna un resistore con simbolo europeo e americano"""
@@ -21,13 +22,13 @@ def draw_resistor():
     d = schemdraw.Drawing(unit=2.5)
     d += elm.Resistor().label('R')
     d += elm.Line().length(1).right()
-    d.save('../images/simbolo_resistore_europeo.svg')
+    d.save('../images/02_componenti/simbolo_resistore_europeo.svg')
     
     # Simbolo americano (zigzag)
     d2 = schemdraw.Drawing(unit=2.5)
     d2 += elm.ResistorIEEE().label('R')
     d2 += elm.Line().length(1).right()
-    d2.save('../images/simbolo_resistore_americano.svg')
+    d2.save('../images/02_componenti/simbolo_resistore_americano.svg')
     
     print("Resistor generato")
 
@@ -37,13 +38,13 @@ def draw_capacitor():
     d = schemdraw.Drawing(unit=2.5)
     d += elm.Capacitor().label('C')
     d += elm.Line().length(1).right()
-    d.save('../images/simbolo_condensatore.svg')
+    d.save('../images/02_componenti/simbolo_condensatore.svg')
     
     # Condensatore polarizzato (usiamo un condensatore standard con indicazione)
     d2 = schemdraw.Drawing(unit=2.5)
     d2 += elm.Capacitor().label('C+')
     d2 += elm.Line().length(1).right()
-    d2.save('../images/simbolo_condensatore_polarizzato.svg')
+    d2.save('../images/02_componenti/simbolo_condensatore_polarizzato.svg')
     
     print("Condensatore generato")
 
@@ -52,7 +53,7 @@ def draw_inductor():
     d = schemdraw.Drawing(unit=2.5)
     d += elm.Inductor().label('L')
     d += elm.Line().length(1).right()
-    d.save('../images/simbolo_induttore.svg')
+    d.save('../images/02_componenti/simbolo_induttore.svg')
     
     print("Induttore generato")
 
@@ -62,13 +63,13 @@ def draw_diode():
     d = schemdraw.Drawing(unit=2.5)
     d += elm.Diode().label('D')
     d += elm.Line().length(1).right()
-    d.save('../images/simbolo_diodo.svg')
+    d.save('../images/02_componenti/simbolo_diodo.svg')
     
     # LED
     d2 = schemdraw.Drawing(unit=2.5)
     d2 += elm.LED().label('LED')
     d2 += elm.Line().length(1).right()
-    d2.save('../images/simbolo_led.svg')
+    d2.save('../images/02_componenti/simbolo_led.svg')
     
     print("Diodo generato")
 
@@ -78,7 +79,7 @@ def draw_transistor_bjt():
     d = schemdraw.Drawing(unit=2.5)
     d += elm.BjtNpn().label('Q')
     d += elm.Line().length(1).right()
-    d.save('../images/simbolo_transistor_npn.svg')
+    d.save('../images/02_componenti/simbolo_transistor_npn.svg')
     
     print("Transistor BJT generato")
 
@@ -87,7 +88,7 @@ def draw_transistor_mosfet():
     d = schemdraw.Drawing(unit=2.5)
     d += elm.NMos().label('Q')
     d += elm.Line().length(1).right()
-    d.save('../images/simbolo_transistor_mosfet.svg')
+    d.save('../images/02_componenti/simbolo_transistor_mosfet.svg')
     
     print("Transistor MOSFET generato")
 
@@ -96,7 +97,7 @@ def draw_transformer():
     d = schemdraw.Drawing(unit=3)
     d += elm.Transformer().label('T')
     d += elm.Line().length(1).right()
-    d.save('../images/simbolo_trasformatore.svg')
+    d.save('../images/02_componenti/simbolo_trasformatore.svg')
     
     print("Trasformatore generato")
 
@@ -105,7 +106,7 @@ def draw_valve():
     d = schemdraw.Drawing(unit=3)
     d += elm.Ic().label('V').label('TRIODE', loc='bottom')
     d += elm.Line().length(1).right()
-    d.save('../images/simbolo_valvola_triodo.svg')
+    d.save('../images/02_componenti/simbolo_valvola_triodo.svg')
     
     print("Valvola generata")
 
@@ -118,7 +119,7 @@ def draw_circuit_examples():
     d += elm.Capacitor().label('C').down()
     d += elm.Line().left()
     d += elm.Line().up()
-    d.save('../images/circuito_serie_rc.svg')
+    d.save('../images/02_componenti/circuito_serie_rc.svg')
     
     # Circuito raddrizzatore a ponte
     d2 = schemdraw.Drawing(unit=2.5)
@@ -134,7 +135,7 @@ def draw_circuit_examples():
     d2 += elm.Line().right()
     d2 += elm.Resistor().label('Load').down()
     d2 += elm.Line().left()
-    d2.save('../images/circuito_ponte_raddrizzatore.svg')
+    d2.save('../images/02_componenti/circuito_ponte_raddrizzatore.svg')
     
     print("Circuiti di esempio generati")
 
@@ -158,7 +159,7 @@ def main():
     draw_circuit_examples()
     
     print("Tutti i diagrammi sono stati generati con successo!")
-    print("File salvati nella directory ../images/")
+    print("File salvati nella directory ../images/02_componenti/")
 
 if __name__ == "__main__":
     main()

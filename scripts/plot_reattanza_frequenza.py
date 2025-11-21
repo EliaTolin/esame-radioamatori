@@ -33,5 +33,5 @@ plt.ylim(0, 1000)  # Limita l'asse Y per migliore visualizzazione
 plt.tight_layout()
 
 # Salva l'immagine
-plt.savefig('/Users/giangio/Documents/GitHub/giangio/esame-radioamatori/images/grafico_reattanza_frequenza.png', dpi=150)
-print("Grafico salvato in images/grafico_reattanza_frequenza.png")
+plt.savefig('/Users/giangio/Documents/GitHub/giangio/esame-radioamatori/images/01_elettronica/grafico_reattanza_frequenza.png', dpi=150)
+print("Grafico salvato in images/01_elettronica/grafico_reattanza_frequenza.png")

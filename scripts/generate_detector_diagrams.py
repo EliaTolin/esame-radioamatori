@@ -8,10 +8,10 @@ import schemdraw.elements as elm
 import os
 
 def setup_output_directory():
-    """Crea la directory images se non esiste"""
-    if not os.path.exists('../images'):
-        os.makedirs('../images')
-    print("Directory images pronta")
+    """Crea la directory images/03_circuiti se non esiste"""
+    if not os.path.exists('../images/03_circuiti'):
+        os.makedirs('../images/03_circuiti')
+    print("Directory images/03_circuiti pronta")
 
 def draw_am_detectors():
     """Disegna rivelatori AM"""
@@ -27,7 +27,7 @@ def draw_am_detectors():
     d1 += elm.Label('Audio Output')
     d1 += elm.Resistor().label('R_L').down()
     d1 += elm.Ground()
-    d1.save('../images/rivelatore_am_diodo.svg')
+    d1.save('../images/03_circuiti/rivelatore_am_diodo.svg')
     
     # Rivelatore AM a prodotto (usando op-amp come moltiplicatore)
     d2 = schemdraw.Drawing(unit=3)
@@ -40,7 +40,7 @@ def draw_am_detectors():
     d2 += elm.Label('Audio Output')
     d2 += elm.Resistor().label('R_L').down()
     d2 += elm.Ground()
-    d2.save('../images/rivelatore_am_prodotto.svg')
+    d2.save('../images/03_circuiti/rivelatore_am_prodotto.svg')
     
     print("Rivelatori AM generati")
 
@@ -61,7 +61,7 @@ def draw_fm_detectors():
     d1 += elm.Label('Audio Output')
     d1 += elm.Resistor().label('R_L').down()
     d1 += elm.Ground()
-    d1.save('../images/rivelatore_fm_pendenza.svg')
+    d1.save('../images/03_circuiti/rivelatore_fm_pendenza.svg')
     
     # Rivelatore Foster-Seeley semplificato
     d2 = schemdraw.Drawing(unit=3)
@@ -81,7 +81,7 @@ def draw_fm_detectors():
     d2 += elm.Label('Audio Output')
     d2 += elm.Capacitor().label('C_out').down()
     d2 += elm.Ground()
-    d2.save('../images/rivelatore_foster_seeley.svg')
+    d2.save('../images/03_circuiti/rivelatore_foster_seeley.svg')
     
     print("Rivelatori FM generati")
 
@@ -99,7 +99,7 @@ def draw_ssb_detectors():
     d1 += elm.Label('Audio Output')
     d1 += elm.Resistor().label('R_L').down()
     d1 += elm.Ground()
-    d1.save('../images/rivelatore_ssb_bfo.svg')
+    d1.save('../images/03_circuiti/rivelatore_ssb_bfo.svg')
     
     # Rivelatore CW con beat
     d2 = schemdraw.Drawing(unit=3)
@@ -112,7 +112,7 @@ def draw_ssb_detectors():
     d2 += elm.Label('Audio Output')
     d2 += elm.Resistor().label('R_L').down()
     d2 += elm.Ground()
-    d2.save('../images/rivelatore_cw_beat.svg')
+    d2.save('../images/03_circuiti/rivelatore_cw_beat.svg')
     
     print("Rivelatori SSB/CW generati")
 
@@ -130,7 +130,7 @@ def draw_receiver_block():
     d1 += elm.Ic().label('Audio Amp').right()
     d1 += elm.Speaker().label('Speaker').down()
     d1 += elm.Ground()
-    d1.save('../images/ricevitore_blocchi.svg')
+    d1.save('../images/03_circuiti/ricevitore_blocchi.svg')
     
     print("Diagramma a blocchi generato")
 

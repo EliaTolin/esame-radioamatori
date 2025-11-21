@@ -25,5 +25,5 @@ ax.annotate('f = 1/T', xy=(np.pi, 0.8), xytext=(np.pi + 0.5, 0.9),
             fontsize=10, color='green')
 
 plt.tight_layout()
-plt.savefig('images/grafico_segnale_sinusoidale.png', dpi=150)
+plt.savefig('images/01_elettronica/grafico_segnale_sinusoidale.png', dpi=150)
 plt.close()

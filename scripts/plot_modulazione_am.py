@@ -27,5 +27,5 @@ ax2.set_title('Segnale Modulato AM')
 ax2.grid(True)
 
 plt.tight_layout()
-plt.savefig('images/grafico_modulazione_am.png', dpi=150)
+plt.savefig('images/01_elettronica/grafico_modulazione_am.png', dpi=150)
 plt.close()

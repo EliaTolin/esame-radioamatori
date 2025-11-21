@@ -8,10 +8,10 @@ import schemdraw.elements as elm
 import os
 
 def setup_output_directory():
-    """Crea la directory images se non esiste"""
-    if not os.path.exists('../images'):
-        os.makedirs('../images')
-    print("Directory images pronta")
+    """Crea la directory images/03_circuiti se non esiste"""
+    if not os.path.exists('../images/03_circuiti'):
+        os.makedirs('../images/03_circuiti')
+    print("Directory images/03_circuiti pronta")
 
 def draw_simple_amplifiers():
     """Disegna circuiti di amplificatori molto semplici"""
@@ -27,7 +27,7 @@ def draw_simple_amplifiers():
     d1 += elm.Label('V_out')
     d1 += elm.Resistor().label('R_L').down()
     d1 += elm.Ground()
-    d1.save('../images/amplificatore_base_transistor.svg')
+    d1.save('../images/03_circuiti/amplificatore_base_transistor.svg')
     
     # Amplificatore con op-amp
     d2 = schemdraw.Drawing(unit=3)
@@ -38,7 +38,7 @@ def draw_simple_amplifiers():
     d2 += elm.Resistor().label('R_f').up()
     d2 += elm.Line().left()
     d2 += elm.Ground()
-    d2.save('../images/amplificatore_opamp.svg')
+    d2.save('../images/03_circuiti/amplificatore_opamp.svg')
     
     # Amplificatore RF
     d3 = schemdraw.Drawing(unit=3)
@@ -49,7 +49,7 @@ def draw_simple_amplifiers():
     d3 += elm.Label('V_out')
     d3 += elm.Resistor().label('R_L').down()
     d3 += elm.Ground()
-    d3.save('../images/amplificatore_rf.svg')
+    d3.save('../images/03_circuiti/amplificatore_rf.svg')
     
     print("Amplificatori semplici generati")
 
@@ -68,7 +68,7 @@ def draw_amplifier_configurations():
     d1 += elm.Label('V_out')
     d1 += elm.Resistor().label('R_L').down()
     d1 += elm.Ground()
-    d1.save('../images/amplificatore_differenziale.svg')
+    d1.save('../images/03_circuiti/amplificatore_differenziale.svg')
     
     # Amplificatore push-pull
     d2 = schemdraw.Drawing(unit=3)
@@ -79,7 +79,7 @@ def draw_amplifier_configurations():
     d2 += elm.Label('V_out')
     d2 += elm.Resistor().label('R_L').down()
     d2 += elm.Ground()
-    d2.save('../images/amplificatore_push_pull.svg')
+    d2.save('../images/03_circuiti/amplificatore_push_pull.svg')
     
     print("Configurazioni di amplificatori generate")
 

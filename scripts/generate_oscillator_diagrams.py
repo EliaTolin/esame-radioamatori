@@ -8,10 +8,10 @@ import schemdraw.elements as elm
 import os
 
 def setup_output_directory():
-    """Crea la directory images se non esiste"""
-    if not os.path.exists('../images'):
-        os.makedirs('../images')
-    print("Directory images pronta")
+    """Crea la directory images/03_circuiti se non esiste"""
+    if not os.path.exists('../images/03_circuiti'):
+        os.makedirs('../images/03_circuiti')
+    print("Directory images/03_circuiti pronta")
 
 def draw_basic_oscillators():
     """Disegna oscillatori base senza riferimenti complessi"""
@@ -30,7 +30,7 @@ def draw_basic_oscillators():
     d1 += elm.Line().down()
     d1 += elm.Inductor().label('L').right()
     d1 += elm.Ground()
-    d1.save('../images/oscillatore_lc_base.svg')
+    d1.save('../images/03_circuiti/oscillatore_lc_base.svg')
     
     # Oscillatore a quarzo
     d2 = schemdraw.Drawing(unit=3)
@@ -43,7 +43,7 @@ def draw_basic_oscillators():
     d2 += elm.Label('Output')
     d2 += elm.Resistor().label('R_L').down()
     d2 += elm.Ground()
-    d2.save('../images/oscillatore_quarzo_base.svg')
+    d2.save('../images/03_circuiti/oscillatore_quarzo_base.svg')
     
     # VCO base
     d3 = schemdraw.Drawing(unit=3)
@@ -56,7 +56,7 @@ def draw_basic_oscillators():
     d3 += elm.Label('VCO Output')
     d3 += elm.Resistor().label('R_L').down()
     d3 += elm.Ground()
-    d3.save('../images/oscillatore_vco_base.svg')
+    d3.save('../images/03_circuiti/oscillatore_vco_base.svg')
     
     print("Oscillatori base generati")
 
@@ -72,7 +72,7 @@ def draw_resonant_circuits():
     d1 += elm.Label('f₀ = 1/(2π√LC)')
     d1 += elm.Resistor().label('R').down()
     d1 += elm.Ground()
-    d1.save('../images/circuito_risonante_lc.svg')
+    d1.save('../images/03_circuiti/circuito_risonante_lc.svg')
     
     # Circuito cristallo
     d2 = schemdraw.Drawing(unit=3)
@@ -84,7 +84,7 @@ def draw_resonant_circuits():
     d2 += elm.Line().down()
     d2 += elm.Line().left()
     d2 += elm.Label('f₀ = 1/(2π√L_mC_m)')
-    d2.save('../images/circuito_cristallo.svg')
+    d2.save('../images/03_circuiti/circuito_cristallo.svg')
     
     print("Circuiti risonanti generati")
 

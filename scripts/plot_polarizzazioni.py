@@ -18,7 +18,7 @@ ax1.set_title('Polarizzazione Lineare')
 ax1.legend()
 ax1.grid(True)
 plt.tight_layout()
-plt.savefig('images/grafico_polarizzazione_lineare.png', dpi=150)
+plt.savefig('images/01_elettronica/grafico_polarizzazione_lineare.png', dpi=150)
 plt.close()
 
 # 2. Polarizzazione circolare
@@ -43,7 +43,7 @@ ax2b.grid(True)
 ax2b.axis('equal')
 
 plt.tight_layout()
-plt.savefig('images/grafico_polarizzazione_circolare.png', dpi=150)
+plt.savefig('images/01_elettronica/grafico_polarizzazione_circolare.png', dpi=150)
 plt.close()
 
 # 3. Polarizzazione ellittica
@@ -58,7 +58,7 @@ ax3.set_title('Polarizzazione Ellittica')
 ax3.grid(True)
 ax3.axis('equal')
 plt.tight_layout()
-plt.savefig('images/grafico_polarizzazione_ellittica.png', dpi=150)
+plt.savefig('images/01_elettronica/grafico_polarizzazione_ellittica.png', dpi=150)
 plt.close()
 
 print("Grafici delle polarizzazioni generati!")
