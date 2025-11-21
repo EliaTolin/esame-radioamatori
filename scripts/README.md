@@ -16,3 +16,6 @@ Questo repository contiene script Python per generare grafici utilizzati nelle p
 - `plot_segnale_quadra.py`: Genera il grafico di un segnale rettangolare (quadra).
 - `plot_modulazione_am.py`: Genera il grafico della modulazione di ampiezza (AM).
 - `plot_modulazione_fm.py`: Genera il grafico della modulazione di frequenza (FM).
+- `plot_resistore_vi.py`: Genera la curva V-I di un resistore (Legge di Ohm).
+- `plot_condensatore_carica.py`: Genera i grafici di carica e scarica di un condensatore.
+- `plot_reattanza_frequenza.py`: Genera il grafico della reattanza vs frequenza per condensatori e induttori.
