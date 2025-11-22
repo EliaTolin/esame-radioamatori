@@ -18,7 +18,7 @@ L'**Unione Internazionale delle Telecomunicazioni (UIT)** è un'agenzia speciali
 ### Diagramma Organizzazione UIT
 ```mermaid
 graph TD;
-    Nazioni Unite["Nazioni Unite<br>🏛️"] --> UIT["Unione Internazionale<br>delle Telecomunicazioni<br>UIT"];
+    NazionißUnite["Nazioni Unite<br>🏛️"] --> UIT["Unione Internazionale<br>delle Telecomunicazioni<br>UIT"];
     UIT --> UIT_R["UIT-R<br>Radiocomunicazioni"];
     UIT --> UIT_T["UIT-T<br>Standardizzazione"];
     UIT --> UIT_D["UIT-D<br>Sviluppo"];
@@ -69,16 +69,22 @@ L'Articolo 1.81 definisce la stazione di radioamatore:
 ```mermaid
 graph TD;
     Operatore["Operatore<br>👤"] --> Controlli["Controlli<br>🎛️"];
+    Microfono["Microfono<br>🎤"] --> Controlli;
     Controlli --> Trasmittente["Trasmittente<br>📡"];
-    Controlli --> Ricevente["Ricevente<br>📻"];
     Trasmittente --> Amplificatore["Amplificatore<br>🔊"];
-    Amplificatore --> Antenna["Antenna<br>📻"];
-    Antenna --> Ricevente;
+    Amplificatore --> LineaTX["Linea TX<br>📡"];
+    LineaTX --> Antenna["Antenna<br>📻"];
+    Controlli --> Ricevente["Ricevente<br>📻"];
+    Antenna --> LineaRX["Linea RX<br>📡"];
+    LineaRX --> Ricevente;
     Ricevente --> Altoparlante["Altoparlante<br>🔊"];
     Alimentazione["Alimentazione<br>🔋"] --> Trasmittente;
     Alimentazione --> Ricevente;
+    Alimentazione --> Amplificatore;
+    Alimentazione --> Controlli;
+    Alimentazione --> Altoparlante;
     classDef stazione fill:#0cf,stroke:#333,stroke-width:2px;
-    class Trasmittente,Ricevente,Antenna stazione;
+    class Trasmittente,Ricevente,Antenna,Amplificatore,LineaTX,LineaRX stazione;
 ```
 
 ## 📜 Articolo S25: Condizioni Generali
