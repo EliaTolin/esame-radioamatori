@@ -14,7 +14,7 @@ def create_directories():
 
 def draw_block_diagram(ax, blocks, connections, title):
     """Draw a block diagram with matplotlib"""
-    ax.set_xlim(0, 15)
+    ax.set_xlim(0, 20)
     ax.set_ylim(-2, 3)
     ax.axis('off')
     ax.set_title(title, fontsize=14, fontweight='bold', pad=20)
@@ -40,17 +40,17 @@ def generate_receiver_diagrams():
     print("Generazione diagrammi ricevitori...")
 
     # 1. Superheterodyne Single Conversion
-    fig, ax = plt.subplots(figsize=(15, 6))
+    fig, ax = plt.subplots(figsize=(20, 6))
 
     blocks = [
-        (0.5, 0.5, 1.5, 1, 'Antenna\n📡', '#e6f3ff'),
-        (2.5, 0.5, 1.5, 1, 'RF\nFilter\n🎛️', '#fff2e6'),
-        (4.5, 0.5, 1.5, 1, 'RF\nAmp\n📈', '#e6ffe6'),
-        (6.5, 0.5, 1.5, 1, 'Mixer\n🔄', '#ffe6e6'),
-        (8.5, 0.5, 1.5, 1, 'IF\nFilter\n🎛️', '#fff2e6'),
-        (10.5, 0.5, 1.5, 1, 'IF\nAmp\n📈', '#e6ffe6'),
-        (12.5, 0.5, 1.5, 1, 'Detector\n🎯', '#ffffe6'),
-        (2.5, 2, 1.5, 0.8, 'LO\n🔄', '#f0f0f0')
+        (0.5, 0.5, 1.5, 1, 'Antenna', '#e6f3ff'),
+        (2.5, 0.5, 1.5, 1, 'RF\nFilter', '#fff2e6'),
+        (4.5, 0.5, 1.5, 1, 'RF\nAmp', '#e6ffe6'),
+        (6.5, 0.5, 1.5, 1, 'Mixer', '#ffe6e6'),
+        (8.5, 0.5, 1.5, 1, 'IF\nFilter', '#fff2e6'),
+        (10.5, 0.5, 1.5, 1, 'IF\nAmp', '#e6ffe6'),
+        (12.5, 0.5, 1.5, 1, 'Detector', '#ffffe6'),
+        (2.5, 2, 1.5, 0.8, 'LO', '#f0f0f0')
     ]
 
     connections = [
@@ -66,21 +66,21 @@ def generate_receiver_diagrams():
     print("Superheterodyne single generato")
 
     # 2. Superheterodyne Double Conversion
-    fig, ax = plt.subplots(figsize=(18, 6))
+    fig, ax = plt.subplots(figsize=(20, 6))
 
     blocks = [
-        (0.5, 0.5, 1.2, 1, 'Antenna\n📡', '#e6f3ff'),
+        (0.5, 0.5, 1.2, 1, 'Antenna', '#e6f3ff'),
         (2.2, 0.5, 1.2, 1, 'RF\nFilter', '#fff2e6'),
         (3.9, 0.5, 1.2, 1, 'RF\nAmp', '#e6ffe6'),
-        (5.6, 0.5, 1.2, 1, 'Mixer 1\n🔄', '#ffe6e6'),
+        (5.6, 0.5, 1.2, 1, 'Mixer 1', '#ffe6e6'),
         (7.3, 0.5, 1.2, 1, 'IF1\nFilter', '#fff2e6'),
         (9.0, 0.5, 1.2, 1, 'IF1\nAmp', '#e6ffe6'),
-        (10.7, 0.5, 1.2, 1, 'Mixer 2\n🔄', '#ffe6e6'),
+        (10.7, 0.5, 1.2, 1, 'Mixer 2', '#ffe6e6'),
         (12.4, 0.5, 1.2, 1, 'IF2\nFilter', '#fff2e6'),
         (14.1, 0.5, 1.2, 1, 'IF2\nAmp', '#e6ffe6'),
-        (15.8, 0.5, 1.2, 1, 'Detector\n🎯', '#ffffe6'),
-        (2.2, 2, 1.2, 0.8, 'LO1\n🔄', '#f0f0f0'),
-        (10.7, 2, 1.2, 0.8, 'LO2\n🔄', '#f0f0f0')
+        (15.8, 0.5, 1.2, 1, 'Detector', '#ffffe6'),
+        (2.2, 2, 1.2, 0.8, 'LO1', '#f0f0f0'),
+        (10.7, 2, 1.2, 0.8, 'LO2', '#f0f0f0')
     ]
 
     connections = [
@@ -98,20 +98,20 @@ def generate_receiver_diagrams():
     print("Superheterodyne double generato")
 
     # 3. AM Receiver Block Diagram
-    fig, ax = plt.subplots(figsize=(16, 6))
+    fig, ax = plt.subplots(figsize=(20, 6))
 
     blocks = [
-        (0.5, 0.5, 1.2, 1, 'Antenna\n📡', '#e6f3ff'),
+        (0.5, 0.5, 1.2, 1, 'Antenna', '#e6f3ff'),
         (2.2, 0.5, 1.2, 1, 'RF\nFilter', '#fff2e6'),
         (3.9, 0.5, 1.2, 1, 'RF\nAmp', '#e6ffe6'),
-        (5.6, 0.5, 1.2, 1, 'Mixer\n🔄', '#ffe6e6'),
+        (5.6, 0.5, 1.2, 1, 'Mixer', '#ffe6e6'),
         (7.3, 0.5, 1.2, 1, 'IF\nFilter', '#fff2e6'),
         (9.0, 0.5, 1.2, 1, 'IF\nAmp', '#e6ffe6'),
-        (10.7, 0.5, 1.2, 1, 'Limiter\n📏', '#ffcccc'),
-        (12.4, 0.5, 1.2, 1, 'AM\nDetector\n🎯', '#ffffe6'),
-        (14.1, 0.5, 1.2, 1, 'AGC\n📊', '#ccffcc'),
-        (2.2, 2, 1.2, 0.8, 'LO\n🔄', '#f0f0f0'),
-        (12.4, -1, 1.2, 0.8, 'S-Meter\n📊', '#e6e6ff')
+        (10.7, 0.5, 1.2, 1, 'Limiter', '#ffcccc'),
+        (12.4, 0.5, 1.2, 1, 'AM\nDetector', '#ffffe6'),
+        (14.1, 0.5, 1.2, 1, 'AGC', '#ccffcc'),
+        (2.2, 2, 1.2, 0.8, 'LO', '#f0f0f0'),
+        (12.4, -1, 1.2, 0.8, 'S-Meter', '#e6e6ff')
     ]
 
     connections = [
@@ -129,20 +129,20 @@ def generate_receiver_diagrams():
     print("AM receiver blocks generato")
 
     # 4. SSB Receiver Block Diagram
-    fig, ax = plt.subplots(figsize=(16, 6))
+    fig, ax = plt.subplots(figsize=(20, 6))
 
     blocks = [
-        (0.5, 0.5, 1.2, 1, 'Antenna\n📡', '#e6f3ff'),
+        (0.5, 0.5, 1.2, 1, 'Antenna', '#e6f3ff'),
         (2.2, 0.5, 1.2, 1, 'RF\nFilter', '#fff2e6'),
         (3.9, 0.5, 1.2, 1, 'RF\nAmp', '#e6ffe6'),
-        (5.6, 0.5, 1.2, 1, 'Mixer\n🔄', '#ffe6e6'),
+        (5.6, 0.5, 1.2, 1, 'Mixer', '#ffe6e6'),
         (7.3, 0.5, 1.2, 1, 'IF\nFilter', '#fff2e6'),
         (9.0, 0.5, 1.2, 1, 'IF\nAmp', '#e6ffe6'),
-        (10.7, 0.5, 1.2, 1, 'SSB\nFilter\n🎛️', '#ffcccc'),
-        (12.4, 0.5, 1.2, 1, 'Product\nDetector\n🔄', '#ffffe6'),
+        (10.7, 0.5, 1.2, 1, 'SSB\nFilter', '#ffcccc'),
+        (12.4, 0.5, 1.2, 1, 'Product\nDetector', '#ffffe6'),
         (14.1, 0.5, 1.2, 1, 'AF\nFilter', '#fff2e6'),
-        (2.2, 2, 1.2, 0.8, 'LO\n🔄', '#f0f0f0'),
-        (10.7, 2, 1.2, 0.8, 'BFO\n±1.5kHz\n🔄', '#f0f0f0')
+        (2.2, 2, 1.2, 0.8, 'LO', '#f0f0f0'),
+        (10.7, 2, 1.2, 0.8, 'BFO\n±1.5kHz', '#f0f0f0')
     ]
 
     connections = [
@@ -160,19 +160,19 @@ def generate_receiver_diagrams():
     print("SSB receiver blocks generato")
 
     # 5. CW Receiver with BFO
-    fig, ax = plt.subplots(figsize=(14, 6))
+    fig, ax = plt.subplots(figsize=(20, 6))
 
     blocks = [
-        (0.5, 0.5, 1.2, 1, 'Antenna\n📡', '#e6f3ff'),
+        (0.5, 0.5, 1.2, 1, 'Antenna', '#e6f3ff'),
         (2.2, 0.5, 1.2, 1, 'RF\nFilter', '#fff2e6'),
         (3.9, 0.5, 1.2, 1, 'RF\nAmp', '#e6ffe6'),
-        (5.6, 0.5, 1.2, 1, 'Mixer\n🔄', '#ffe6e6'),
+        (5.6, 0.5, 1.2, 1, 'Mixer', '#ffe6e6'),
         (7.3, 0.5, 1.2, 1, 'IF\nFilter', '#fff2e6'),
         (9.0, 0.5, 1.2, 1, 'IF\nAmp', '#e6ffe6'),
-        (10.7, 0.5, 1.2, 1, 'BFO\nMixer\n🔄', '#ffffe6'),
+        (10.7, 0.5, 1.2, 1, 'BFO\nMixer', '#ffffe6'),
         (12.4, 0.5, 1.2, 1, 'AF\nFilter', '#fff2e6'),
-        (2.2, 2, 1.2, 0.8, 'LO\n🔄', '#f0f0f0'),
-        (7.3, 2, 1.2, 0.8, 'BFO\n±800Hz\n🔄', '#f0f0f0')
+        (2.2, 2, 1.2, 0.8, 'LO', '#f0f0f0'),
+        (7.3, 2, 1.2, 0.8, 'BFO\n±800Hz', '#f0f0f0')
     ]
 
     connections = [

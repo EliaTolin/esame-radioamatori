@@ -14,7 +14,7 @@ def create_directories():
 
 def draw_block_diagram(ax, blocks, connections, title):
     """Draw a block diagram with matplotlib"""
-    ax.set_xlim(0, 15)
+    ax.set_xlim(0, 20)
     ax.set_ylim(-2, 3)
     ax.axis('off')
     ax.set_title(title, fontsize=14, fontweight='bold', pad=20)
@@ -40,16 +40,16 @@ def generate_transmitter_diagrams():
     print("Generazione diagrammi trasmettitori...")
 
     # 1. CW Transmitter
-    fig, ax = plt.subplots(figsize=(14, 6))
+    fig, ax = plt.subplots(figsize=(20, 6))
 
     blocks = [
-        (0.5, 0.5, 1.5, 1, 'Oscillatore\nCW\n📡', '#e6f3ff'),
-        (2.5, 0.5, 1.5, 1, 'Chiave\nElettronica\n🔑', '#ffe6e6'),
-        (4.5, 0.5, 1.5, 1, 'Buffer\nAmp\n📈', '#e6ffe6'),
-        (6.5, 0.5, 1.5, 1, 'Filtro\nPassa-Banda\n🎯', '#fff2e6'),
-        (8.5, 0.5, 1.5, 1, 'Amp\nPotenza\n⚡', '#ffffe6'),
-        (10.5, 0.5, 1.5, 1, 'Antenna\n📡', '#e6f3ff'),
-        (2.5, 2, 1.5, 0.8, 'Manipolazione\nMorse\n👆', '#f0f0f0')
+        (0.5, 0.5, 1.5, 1, 'Oscillatore\nCW', '#e6f3ff'),
+        (2.5, 0.5, 1.5, 1, 'Chiave\nElettronica', '#ffe6e6'),
+        (4.5, 0.5, 1.5, 1, 'Buffer\nAmp', '#e6ffe6'),
+        (6.5, 0.5, 1.5, 1, 'Filtro\nPassa-Banda', '#fff2e6'),
+        (8.5, 0.5, 1.5, 1, 'Amp\nPotenza', '#ffffe6'),
+        (10.5, 0.5, 1.5, 1, 'Antenna', '#e6f3ff'),
+        (2.5, 2, 1.5, 0.8, 'Manipolazione\nMorse', '#f0f0f0')
     ]
 
     connections = [
@@ -64,17 +64,17 @@ def generate_transmitter_diagrams():
     print("CW transmitter blocks generato")
 
     # 2. SSB Transmitter
-    fig, ax = plt.subplots(figsize=(18, 6))
+    fig, ax = plt.subplots(figsize=(20, 6))
 
     blocks = [
-        (0.5, 0.5, 1.2, 1, 'Oscillatore\nPortante\n📡', '#e6f3ff'),
-        (2.2, 0.5, 1.2, 1, 'Modulatore\nBilanciato\n⚖️', '#ffe6e6'),
-        (3.9, 0.5, 1.2, 1, 'Filtro\nLaterale\n🎯', '#fff2e6'),
-        (5.6, 0.5, 1.2, 1, 'Amp\nLineare\n📈', '#e6ffe6'),
-        (7.3, 0.5, 1.2, 1, 'Filtro\nUscita\n🎯', '#fff2e6'),
-        (9.0, 0.5, 1.2, 1, 'Amp\nPotenza\n⚡', '#ffffe6'),
-        (10.7, 0.5, 1.2, 1, 'Antenna\n📡', '#e6f3ff'),
-        (2.2, 2, 1.2, 0.8, 'Audio\n300-3400Hz\n🎵', '#f0f0f0')
+        (0.5, 0.5, 1.2, 1, 'Oscillatore\nPortante', '#e6f3ff'),
+        (2.2, 0.5, 1.2, 1, 'Modulatore\nBilanciato', '#ffe6e6'),
+        (3.9, 0.5, 1.2, 1, 'Filtro\nLaterale', '#fff2e6'),
+        (5.6, 0.5, 1.2, 1, 'Amp\nLineare', '#e6ffe6'),
+        (7.3, 0.5, 1.2, 1, 'Filtro\nUscita', '#fff2e6'),
+        (9.0, 0.5, 1.2, 1, 'Amp\nPotenza', '#ffffe6'),
+        (10.7, 0.5, 1.2, 1, 'Antenna', '#e6f3ff'),
+        (2.2, 2, 1.2, 0.8, 'Audio\n300-3400Hz', '#f0f0f0')
     ]
 
     connections = [
@@ -90,18 +90,18 @@ def generate_transmitter_diagrams():
     print("SSB transmitter blocks generato")
 
     # 3. FM Transmitter
-    fig, ax = plt.subplots(figsize=(18, 6))
+    fig, ax = plt.subplots(figsize=(20, 6))
 
     blocks = [
-        (0.5, 0.5, 1.2, 1, 'Oscillatore\nFM\n📡', '#e6f3ff'),
-        (2.2, 0.5, 1.2, 1, 'Modulatore\nFrequenza\n🔄', '#ffe6e6'),
-        (3.9, 0.5, 1.2, 1, 'Amp\nRF\n📈', '#e6ffe6'),
-        (5.6, 0.5, 1.2, 1, 'Moltiplicatore\n⚡', '#ffcccc'),
-        (7.3, 0.5, 1.2, 1, 'Filtro\nPassa-Banda\n🎯', '#fff2e6'),
-        (9.0, 0.5, 1.2, 1, 'Amp\nPotenza\n⚡', '#ffffe6'),
-        (10.7, 0.5, 1.2, 1, 'Antenna\n📡', '#e6f3ff'),
-        (2.2, 2, 1.2, 0.8, 'Audio\n50-15kHz\n🎵', '#f0f0f0'),
-        (2.2, -1, 1.2, 0.8, 'Pre-Enfasi\n🎛️', '#e6e6ff')
+        (0.5, 0.5, 1.2, 1, 'Oscillatore\nFM', '#e6f3ff'),
+        (2.2, 0.5, 1.2, 1, 'Modulatore\nFrequenza', '#ffe6e6'),
+        (3.9, 0.5, 1.2, 1, 'Amp\nRF', '#e6ffe6'),
+        (5.6, 0.5, 1.2, 1, 'Moltiplicatore', '#ffcccc'),
+        (7.3, 0.5, 1.2, 1, 'Filtro\nPassa-Banda', '#fff2e6'),
+        (9.0, 0.5, 1.2, 1, 'Amp\nPotenza', '#ffffe6'),
+        (10.7, 0.5, 1.2, 1, 'Antenna', '#e6f3ff'),
+        (2.2, 2, 1.2, 0.8, 'Audio\n50-15kHz', '#f0f0f0'),
+        (2.2, -1, 1.2, 0.8, 'Pre-Enfasi', '#e6e6ff')
     ]
 
     connections = [
