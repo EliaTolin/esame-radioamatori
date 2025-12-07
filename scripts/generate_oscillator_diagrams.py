@@ -7,6 +7,11 @@ import schemdraw
 import schemdraw.elements as elm
 import os
 
+from utils import get_output_dir, run_with_error_handling
+
+# Directory di output
+OUTPUT_DIR = get_output_dir("03_circuiti")
+
 def setup_output_directory():
     """Crea la directory images/03_circuiti se non esiste"""
     if not os.path.exists('../images/03_circuiti'):
@@ -30,7 +35,7 @@ def draw_basic_oscillators():
     d1 += elm.Line().down()
     d1 += elm.Inductor().label('L').right()
     d1 += elm.Ground()
-    d1.save('../images/03_circuiti/oscillatore_lc_base.svg')
+    d1.save(OUTPUT_DIR / 'oscillatore_lc_base.svg')
     
     # Oscillatore a quarzo
     d2 = schemdraw.Drawing(unit=3)
@@ -43,7 +48,7 @@ def draw_basic_oscillators():
     d2 += elm.Label('Output')
     d2 += elm.Resistor().label('R_L').down()
     d2 += elm.Ground()
-    d2.save('../images/03_circuiti/oscillatore_quarzo_base.svg')
+    d2.save(OUTPUT_DIR / 'oscillatore_quarzo_base.svg')
     
     # VCO base
     d3 = schemdraw.Drawing(unit=3)
@@ -56,7 +61,7 @@ def draw_basic_oscillators():
     d3 += elm.Label('VCO Output')
     d3 += elm.Resistor().label('R_L').down()
     d3 += elm.Ground()
-    d3.save('../images/03_circuiti/oscillatore_vco_base.svg')
+    d3.save(OUTPUT_DIR / 'oscillatore_vco_base.svg')
     
     print("Oscillatori base generati")
 
@@ -72,7 +77,7 @@ def draw_resonant_circuits():
     d1 += elm.Label('f₀ = 1/(2π√LC)')
     d1 += elm.Resistor().label('R').down()
     d1 += elm.Ground()
-    d1.save('../images/03_circuiti/circuito_risonante_lc.svg')
+    d1.save(OUTPUT_DIR / 'circuito_risonante_lc.svg')
     
     # Circuito cristallo
     d2 = schemdraw.Drawing(unit=3)
@@ -84,7 +89,7 @@ def draw_resonant_circuits():
     d2 += elm.Line().down()
     d2 += elm.Line().left()
     d2 += elm.Label('f₀ = 1/(2π√L_mC_m)')
-    d2.save('../images/03_circuiti/circuito_cristallo.svg')
+    d2.save(OUTPUT_DIR / 'circuito_cristallo.svg')
     
     print("Circuiti risonanti generati")
 

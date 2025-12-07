@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 """
-Script per generare diagrammi di amplificatori per il Capitolo 3 (versione ultra semplificata)
+Script per generare diagrammi di amplificatori per il Capitolo 3.
+Amplificatori transistor, op-amp, RF, differenziali e push-pull.
 """
 
 import schemdraw
 import schemdraw.elements as elm
-import os
 
-def setup_output_directory():
-    """Crea la directory images/03_circuiti se non esiste"""
-    if not os.path.exists('../images/03_circuiti'):
-        os.makedirs('../images/03_circuiti')
-    print("Directory images/03_circuiti pronta")
+from utils import get_output_dir, run_with_error_handling
+
+
+# Directory di output
+OUTPUT_DIR = get_output_dir('03_circuiti')
+
 
 def draw_simple_amplifiers():
-    """Disegna circuiti di amplificatori molto semplici"""
-    
+    """Disegna circuiti di amplificatori semplici."""
     # Amplificatore base con transistor
     d1 = schemdraw.Drawing(unit=3)
     d1 += elm.SourceV().label('V_cc')
@@ -27,8 +27,8 @@ def draw_simple_amplifiers():
     d1 += elm.Label('V_out')
     d1 += elm.Resistor().label('R_L').down()
     d1 += elm.Ground()
-    d1.save('../images/03_circuiti/amplificatore_base_transistor.svg')
-    
+    d1.save(OUTPUT_DIR / 'amplificatore_base_transistor.svg')
+
     # Amplificatore con op-amp
     d2 = schemdraw.Drawing(unit=3)
     d2 += elm.Opamp().label('U1').right()
@@ -38,8 +38,8 @@ def draw_simple_amplifiers():
     d2 += elm.Resistor().label('R_f').up()
     d2 += elm.Line().left()
     d2 += elm.Ground()
-    d2.save('../images/03_circuiti/amplificatore_opamp.svg')
-    
+    d2.save(OUTPUT_DIR / 'amplificatore_opamp.svg')
+
     # Amplificatore RF
     d3 = schemdraw.Drawing(unit=3)
     d3 += elm.SourceSin().label('V_in')
@@ -49,13 +49,13 @@ def draw_simple_amplifiers():
     d3 += elm.Label('V_out')
     d3 += elm.Resistor().label('R_L').down()
     d3 += elm.Ground()
-    d3.save('../images/03_circuiti/amplificatore_rf.svg')
-    
-    print("Amplificatori semplici generati")
+    d3.save(OUTPUT_DIR / 'amplificatore_rf.svg')
+
+    print("[OK] Amplificatori semplici generati")
+
 
 def draw_amplifier_configurations():
-    """Disegna configurazioni di amplificatori"""
-    
+    """Disegna configurazioni di amplificatori."""
     # Amplificatore differenziale
     d1 = schemdraw.Drawing(unit=3)
     d1 += elm.Opamp().label('U1').right()
@@ -68,8 +68,8 @@ def draw_amplifier_configurations():
     d1 += elm.Label('V_out')
     d1 += elm.Resistor().label('R_L').down()
     d1 += elm.Ground()
-    d1.save('../images/03_circuiti/amplificatore_differenziale.svg')
-    
+    d1.save(OUTPUT_DIR / 'amplificatore_differenziale.svg')
+
     # Amplificatore push-pull
     d2 = schemdraw.Drawing(unit=3)
     d2 += elm.SourceV().label('V_in')
@@ -79,19 +79,20 @@ def draw_amplifier_configurations():
     d2 += elm.Label('V_out')
     d2 += elm.Resistor().label('R_L').down()
     d2 += elm.Ground()
-    d2.save('../images/03_circuiti/amplificatore_push_pull.svg')
-    
-    print("Configurazioni di amplificatori generate")
+    d2.save(OUTPUT_DIR / 'amplificatore_push_pull.svg')
+
+    print("[OK] Configurazioni amplificatori generate")
+
 
 def main():
-    """Funzione principale che genera tutti i diagrammi di amplificatori"""
-    print("Inizio generazione diagrammi di amplificatori...")
-    
-    setup_output_directory()
+    """Funzione principale che genera tutti i diagrammi di amplificatori."""
+    print(f"Generazione diagrammi amplificatori in: {OUTPUT_DIR}\n")
+
     draw_simple_amplifiers()
     draw_amplifier_configurations()
-    
-    print("Tutti i diagrammi di amplificatori sono stati generati con successo!")
+
+    print(f"\nTutti i diagrammi salvati in: {OUTPUT_DIR}")
+
 
 if __name__ == "__main__":
-    main()
+    exit(run_with_error_handling(main, "generate_amplifier_diagrams"))

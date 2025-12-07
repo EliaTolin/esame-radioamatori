@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 """
-Script per generare diagrammi di filtri per il Capitolo 3 (versione semplificata)
+Script per generare diagrammi di filtri per il Capitolo 3.
+Filtri passa-basso, passa-alto, cristallo e speciali.
 """
 
 import schemdraw
 import schemdraw.elements as elm
-import os
 
-def setup_output_directory():
-    """Crea la directory images/03_circuiti se non esiste"""
-    if not os.path.exists('../images/03_circuiti'):
-        os.makedirs('../images/03_circuiti')
-    print("Directory images/03_circuiti pronta")
+from utils import get_output_dir, run_with_error_handling
+
+
+# Directory di output
+OUTPUT_DIR = get_output_dir('03_circuiti')
+
 
 def draw_filter_circuits():
-    """Disegna circuiti di filtri specifici"""
-    
+    """Disegna circuiti di filtri specifici."""
     # Filtro passa-basso LC di secondo ordine
     d1 = schemdraw.Drawing(unit=3)
     d1 += elm.SourceSin().label('V_in')
@@ -29,8 +29,8 @@ def draw_filter_circuits():
     d1 += elm.Label('V_out')
     d1 += elm.Resistor().label('R_L').down()
     d1 += elm.Ground()
-    d1.save('../images/03_circuiti/filtro_passa_basso_lc_secondo.svg')
-    
+    d1.save(OUTPUT_DIR / 'filtro_passa_basso_lc_secondo.svg')
+
     # Filtro passa-alto LC di secondo ordine
     d2 = schemdraw.Drawing(unit=3)
     d2 += elm.SourceSin().label('V_in')
@@ -44,9 +44,9 @@ def draw_filter_circuits():
     d2 += elm.Label('V_out')
     d2 += elm.Resistor().label('R_L').down()
     d2 += elm.Ground()
-    d2.save('../images/03_circuiti/filtro_passa_alto_lc_secondo.svg')
-    
-    # Filtro a π
+    d2.save(OUTPUT_DIR / 'filtro_passa_alto_lc_secondo.svg')
+
+    # Filtro a pi
     d3 = schemdraw.Drawing(unit=3)
     d3 += elm.SourceSin().label('V_in')
     d3.push()
@@ -63,13 +63,13 @@ def draw_filter_circuits():
     d3 += elm.Label('V_out')
     d3 += elm.Resistor().label('R_L').down()
     d3 += elm.Ground()
-    d3.save('../images/03_circuiti/filtro_pi.svg')
-    
-    print("Circuiti di filtri generati")
+    d3.save(OUTPUT_DIR / 'filtro_pi.svg')
+
+    print("[OK] Circuiti di filtri generati")
+
 
 def draw_crystal_filter():
-    """Disegna circuiti con cristalli di quarzo"""
-    
+    """Disegna circuiti con cristalli di quarzo."""
     # Circuito equivalente del cristallo
     d1 = schemdraw.Drawing(unit=3)
     d1 += elm.Capacitor().label('C_p').right()
@@ -81,8 +81,8 @@ def draw_crystal_filter():
     d1 += elm.Resistor().label('R_m').right()
     d1 += elm.Line().down()
     d1 += elm.Line().left()
-    d1.save('../images/03_circuiti/circuito_cristallo_quarzo.svg')
-    
+    d1.save(OUTPUT_DIR / 'circuito_cristallo_quarzo.svg')
+
     # Filtro a cristallo singolo
     d2 = schemdraw.Drawing(unit=3)
     d2 += elm.SourceSin().label('V_in')
@@ -94,13 +94,13 @@ def draw_crystal_filter():
     d2 += elm.Label('V_out')
     d2 += elm.Capacitor().label('C_L').down()
     d2 += elm.Ground()
-    d2.save('../images/03_circuiti/filtro_cristallo_singolo.svg')
-    
-    print("Circuiti a cristallo generati")
+    d2.save(OUTPUT_DIR / 'filtro_cristallo_singolo.svg')
+
+    print("[OK] Circuiti a cristallo generati")
+
 
 def draw_special_filters():
-    """Disegna filtri speciali"""
-    
+    """Disegna filtri speciali."""
     # Filtro Crossover (per audio)
     d1 = schemdraw.Drawing(unit=3)
     d1 += elm.SourceSin().label('V_in')
@@ -118,8 +118,8 @@ def draw_special_filters():
     d1 += elm.Ground()
     d1 += elm.Line().right()
     d1 += elm.Label('V_out_low')
-    d1.save('../images/03_circuiti/filtro_crossover_audio.svg')
-    
+    d1.save(OUTPUT_DIR / 'filtro_crossover_audio.svg')
+
     # Filtro anti-aliasing
     d2 = schemdraw.Drawing(unit=3)
     d2 += elm.SourceSin().label('Analog In')
@@ -133,20 +133,21 @@ def draw_special_filters():
     d2 += elm.Ic().label('ADC').right()
     d2 += elm.Line().down()
     d2 += elm.Ground()
-    d2.save('../images/03_circuiti/filtro_antialiasing.svg')
-    
-    print("Filtri speciali generati")
+    d2.save(OUTPUT_DIR / 'filtro_antialiasing.svg')
+
+    print("[OK] Filtri speciali generati")
+
 
 def main():
-    """Funzione principale che genera tutti i diagrammi di filtri"""
-    print("Inizio generazione diagrammi di filtri...")
-    
-    setup_output_directory()
+    """Funzione principale che genera tutti i diagrammi di filtri."""
+    print(f"Generazione diagrammi filtri in: {OUTPUT_DIR}\n")
+
     draw_filter_circuits()
     draw_crystal_filter()
     draw_special_filters()
-    
-    print("Tutti i diagrammi di filtri sono stati generati con successo!")
+
+    print(f"\nTutti i diagrammi salvati in: {OUTPUT_DIR}")
+
 
 if __name__ == "__main__":
-    main()
+    exit(run_with_error_handling(main, "generate_filter_diagrams"))

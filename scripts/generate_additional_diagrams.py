@@ -7,6 +7,11 @@ import schemdraw
 import schemdraw.elements as elm
 import os
 
+from utils import get_output_dir, run_with_error_handling
+
+# Directory di output
+OUTPUT_DIR = get_output_dir("03_circuiti")
+
 def setup_output_directory():
     """Crea la directory images se non esiste"""
     if not os.path.exists('../images'):

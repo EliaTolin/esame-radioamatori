@@ -7,6 +7,11 @@ import schemdraw
 import schemdraw.elements as elm
 import os
 
+from utils import get_output_dir, run_with_error_handling
+
+# Directory di output
+OUTPUT_DIR = get_output_dir("03_circuiti")
+
 def setup_output_directory():
     """Crea la directory images/03_circuiti se non esiste"""
     if not os.path.exists('../images/03_circuiti'):
@@ -27,7 +32,7 @@ def draw_simple_pll():
     d1 += elm.Line().left()
     d1 += elm.Line().down()
     d1 += elm.Ground()
-    d1.save('../images/03_circuiti/pll_base.svg')
+    d1.save(OUTPUT_DIR / 'pll_base.svg')
     
     # PLL con VCO
     d2 = schemdraw.Drawing(unit=3)
@@ -42,7 +47,7 @@ def draw_simple_pll():
     d2 += elm.Line().left()
     d2 += elm.Line().down()
     d2 += elm.Ground()
-    d2.save('../images/03_circuiti/pll_vco.svg')
+    d2.save(OUTPUT_DIR / 'pll_vco.svg')
     
     print("PLL base generati")
 
@@ -60,7 +65,7 @@ def draw_pll_components():
     d1 += elm.Label('Error Output')
     d1 += elm.Resistor().label('R_out').down()
     d1 += elm.Ground()
-    d1.save('../images/03_circuiti/phase_detector_pll.svg')
+    d1.save(OUTPUT_DIR / 'phase_detector_pll.svg')
     
     # VCO base
     d2 = schemdraw.Drawing(unit=3)
@@ -73,7 +78,7 @@ def draw_pll_components():
     d2 += elm.Label('VCO Output')
     d2 += elm.Resistor().label('R_L').down()
     d2 += elm.Ground()
-    d2.save('../images/03_circuiti/vco_pll.svg')
+    d2.save(OUTPUT_DIR / 'vco_pll.svg')
     
     # Loop filter
     d3 = schemdraw.Drawing(unit=3)
@@ -88,7 +93,7 @@ def draw_pll_components():
     d3 += elm.Label('Control Output')
     d3 += elm.Resistor().label('R_out').down()
     d3 += elm.Ground()
-    d3.save('../images/03_circuiti/loop_filter_pll.svg')
+    d3.save(OUTPUT_DIR / 'loop_filter_pll.svg')
     
     print("Componenti PLL generati")
 
@@ -106,7 +111,7 @@ def draw_pll_applications():
     d1 += elm.Label('IF Output')
     d1 += elm.Ic().label('Baseband PLL').right()
     d1 += elm.Label('Baseband Output')
-    d1.save('../images/03_circuiti/sintetizzatore_pll.svg')
+    d1.save(OUTPUT_DIR / 'sintetizzatore_pll.svg')
     
     # Clock generator
     d2 = schemdraw.Drawing(unit=3)
@@ -119,7 +124,7 @@ def draw_pll_applications():
     d2 += elm.Label('Memory Clock')
     d2 += elm.Ic().label('Peripheral Clock').right()
     d2 += elm.Label('Peripheral Clock')
-    d2.save('../images/03_circuiti/clock_generator_pll.svg')
+    d2.save(OUTPUT_DIR / 'clock_generator_pll.svg')
     
     print("Applicazioni PLL generate")
 
