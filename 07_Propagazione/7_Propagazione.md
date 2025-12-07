@@ -37,15 +37,11 @@ L'**ionosfera** è la regione dell'atmosfera superiore (da 60 a 1000 km) dove i 
 | **F1** | 150-250 | Ionizzazione diurna, si fonde con F2 | HF regolare |
 | **F2** | 250-400 | Massima ionizzazione, riflessioni lontane | HF DX |
 
-### Diagramma Strati Ionosferici
-```mermaid
-graph TD;
-    Terra["Terra<br>🌍"] --> StratoD["Strato D<br>60-90 km<br>Assorbimento"];
-    StratoD --> StratoE["Strato E<br>90-150 km<br>Riflessioni sporadiche"];
-    StratoE --> StratoF1["Strato F1<br>150-250 km<br>HF regolare"];
-    StratoF1 --> StratoF2["Strato F2<br>250-400 km<br>DX HF"];
-    StratoF2 --> Spazio["Spazio<br>☀️"];
-```
+### Visualizzazione Strati Ionosferici
+
+![Strati ionosferici](../images/07_propagazione/strati_ionosferici.png)
+
+*Sezione dell'atmosfera con gli strati ionosferici D, E, F1, F2 e relative altitudini e caratteristiche.*
 
 ## 🔄 Frequenza Critica e MUF
 
@@ -61,6 +57,18 @@ La **Massima Frequenza Utilizzabile (MUF)** è la frequenza massima per comunica
 - Strato F2 con fc = 10 MHz
 - Per comunicazione a 2000 km: θ ≈ 30°, MUF ≈ 10 / 0.866 ≈ 11.5 MHz
 - Radioamatore può usare fino a 11.5 MHz per quella tratta
+
+### Diagramma Angolo Critico e MUF
+
+![Angolo critico](../images/07_propagazione/angolo_critico.png)
+
+*Relazione tra angolo di incidenza, frequenza critica e MUF. Frequenze sopra la MUF attraversano l'ionosfera.*
+
+### Variazione Giornaliera della MUF
+
+![MUF giornaliero](../images/07_propagazione/muf_giornaliero.png)
+
+*La MUF varia significativamente durante le 24 ore, con massimo nel pomeriggio e minimo prima dell'alba.*
 
 ## 🌞 Influenza del Sole sulla Ionosfera
 
@@ -105,16 +113,17 @@ L'**angolo di irradiazione** determina se il segnale va verso l'onda di suolo o 
 - **Angolo basso**: Preferenzialmente onda di suolo
 - **Angolo alto**: Onda spaziale
 
-### Diagramma Onde di Propagazione
-```mermaid
-graph TD;
-    Antenna["Antenna<br>📡"] --> AngoloBasso["Angolo Basso<br>🪜"];
-    Antenna --> AngoloAlto["Angolo Alto<br>📈"];
-    AngoloBasso --> OndaSuolo["Onda di Suolo<br>🌍"];
-    AngoloAlto --> OndaSpaziale["Onda Spaziale<br>☀️"];
-    OndaSuolo --> Vicino["Distanza Vicina<br>100-500 km"];
-    OndaSpaziale --> Lontano["Distanza Lontana<br>1000+ km"];
-```
+### Visualizzazione Zona di Skip
+
+![Zona di skip](../images/07_propagazione/zona_skip.png)
+
+*La zona di skip è l'area dove il segnale non arriva: troppo lontana per l'onda di terra, troppo vicina per l'onda spaziale.*
+
+### Propagazione Multi-Hop per DX Mondiale
+
+![Propagazione multi-hop](../images/07_propagazione/propagazione_multihop.png)
+
+*Comunicazioni DX intercontinentali: il segnale rimbalza più volte tra ionosfera e terra.*
 
 ## 📉 Affievolimenti (Fading)
 
