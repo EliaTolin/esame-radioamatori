@@ -40,22 +40,22 @@ COLORE_TESTO = '#2C3E50'
 
 def genera_tabella_alfabeto():
     """Genera una tabella visuale dell'alfabeto fonetico NATO."""
-    fig, ax = plt.subplots(figsize=(10, 12))
+    fig, ax = plt.subplots(figsize=(10, 7))
     ax.set_xlim(0, 10)
-    ax.set_ylim(0, 32)
+    ax.set_ylim(0, 15)
     ax.axis('off')
 
     # Titolo
-    ax.text(5, 31.2, 'ALFABETO FONETICO NATO / ICAO',
+    ax.text(5, 14.5, 'ALFABETO FONETICO NATO / ICAO',
             ha='center', va='center', fontsize=18, fontweight='bold',
             color=COLORE_HEADER)
-    ax.text(5, 30.5, 'Standard internazionale per le comunicazioni radioamatoriali',
+    ax.text(5, 13.9, 'Standard internazionale per le comunicazioni radioamatoriali',
             ha='center', va='center', fontsize=10, color='#7F8C8D',
             style='italic')
 
     # Intestazioni colonne (3 colonne)
     col_positions = [1.5, 5, 8.5]
-    header_y = 29.5
+    header_y = 13.0
     for col_x in col_positions:
         ax.text(col_x - 0.5, header_y, 'Lettera', ha='center', va='center',
                 fontsize=10, fontweight='bold', color='white',
@@ -66,7 +66,7 @@ def genera_tabella_alfabeto():
 
     # Disposizione in 3 colonne da 9 righe
     righe_per_colonna = 9
-    y_start = 28.5
+    y_start = 12.0
     row_height = 0.95
 
     for i, (lettera, fonetico) in enumerate(ALFABETO):
@@ -99,10 +99,10 @@ def genera_tabella_alfabeto():
                 fontsize=12, fontweight='bold', color=COLORE_TESTO)
 
     # Nota in basso
-    ax.text(5, 1.5, 'Fonte: Sub Allegato D (art. 3, comma 1, dell\'Allegato n. 26)',
+    ax.text(5, 0.8, 'Fonte: Sub Allegato D (art. 3, comma 1, dell\'Allegato n. 26)',
             ha='center', va='center', fontsize=8, color='#95A5A6',
             style='italic')
-    ax.text(5, 1.0, 'D.Lgs. 1 agosto 2003, n. 259 - Programma di Esame Radioamatore',
+    ax.text(5, 0.3, 'D.Lgs. 1 agosto 2003, n. 259 - Programma di Esame Radioamatore',
             ha='center', va='center', fontsize=8, color='#95A5A6',
             style='italic')
 
