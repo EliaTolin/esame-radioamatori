@@ -17,5 +17,5 @@ ax.set_yticks([-1, 0, 1])
 ax.set_yticklabels(['-1', '0', '1'])
 
 plt.tight_layout()
-plt.savefig('images/grafico_segnale_quadra.png', dpi=150)
+plt.savefig('images/01_elettronica/grafico_segnale_quadra.png', dpi=150)
 plt.close()
