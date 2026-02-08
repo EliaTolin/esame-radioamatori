@@ -69,11 +69,12 @@ I documenti sono organizzati in cartelle corrispondenti ai macroargomenti del pr
 
 ### B. Questioni di Natura Operativa
 
-- [1. Codice Q](./B_Operativa/1_Codice_Q.md)
-- [2. Abbreviazioni Operative](./B_Operativa/2_Abbreviazioni_Operative.md)
-- [3. Segnali Internazionali di Soccorso](./B_Operativa/3_Segnali_Internazionali_Soccorso.md)
-- [4. Indicativi di Chiamata](./B_Operativa/4_Indicativi_Chiamata.md)
-- [5. Piani di Frequenze della IARU](./B_Operativa/5_Piani_Frequenze_IARU.md)
+- [1. Alfabeto Fonetico](./B_Operativa/1_Alfabeto_Fonetico.md)
+- [2. Codice Q](./B_Operativa/2_Codice_Q.md)
+- [3. Abbreviazioni Operative](./B_Operativa/3_Abbreviazioni_Operative.md)
+- [4. Segnali Internazionali di Soccorso](./B_Operativa/4_Segnali_Internazionali_Soccorso.md)
+- [5. Indicativi di Chiamata](./B_Operativa/5_Indicativi_Chiamata.md)
+- [6. Piani di Frequenze della IARU](./B_Operativa/6_Piani_Frequenze_IARU.md)
 
 ### C. Regolamentazione Nazionale e Internazionale
 

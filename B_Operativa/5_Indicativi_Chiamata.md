@@ -1,4 +1,4 @@
-# B.4 Indicativi di Chiamata: La Nostra Identità nell'Etere 📻🆔
+# B.5 Indicativi di Chiamata: La Nostra Identita' nell'Etere 📻🆔
 
 Benvenuti nel mondo degli indicativi di chiamata! L'indicativo è molto più di una semplice sigla: è la nostra identità unica nell'etere, il nostro passaporto radioamatoriale che ci identifica in tutto il mondo. Scopriamo insieme la struttura di questi codici speciali, le regole internazionali e come utilizzarli correttamente per comunicazioni sicure e ordinate!
 
@@ -299,5 +299,5 @@ Testa le tue conoscenze sugli indicativi di chiamata!
 Gli indicativi di chiamata sono il nostro biglietto da visita nell'etere mondiale. Dalla loro struttura precisa alle regole di utilizzo, rappresentano l'ordine e la legalità delle comunicazioni radioamatoriali. Utilizzarli correttamente significa rispettare la comunità globale e garantire che ogni trasmissione sia identificabile e tracciabile. Il nostro indicativo non è solo un codice: è la nostra firma nell'etere! 📻🆔
 
 ---
-[Torna al README](../README.md) | [Precedente: 3 Segnali Internazionali di Soccorso](./3_Segnali_Internazionali_Soccorso.md) | [Successivo: 5 Piani di Frequenze della IARU](./5_Piani_Frequenze_IARU.md)</content>
+[Torna al README](../README.md) | [Precedente: 4 Segnali Internazionali di Soccorso](./4_Segnali_Internazionali_Soccorso.md) | [Successivo: 6 Piani di Frequenze della IARU](./6_Piani_Frequenze_IARU.md)</content>
 <parameter name="filePath">B_Operativa/4_Indicativi_Chiamata.md

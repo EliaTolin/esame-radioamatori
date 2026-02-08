@@ -1,4 +1,4 @@
-# B.1 Codice Q: Il Linguaggio Universale dei Radioamatori 📻💬
+# B.2 Codice Q: Il Linguaggio Universale dei Radioamatori 📻💬
 
 Benvenuti nel affascinante mondo del codice Q! Questo sistema di codici abbreviati è il linguaggio universale dei radioamatori, permettendo comunicazioni rapide ed efficienti in tutto il mondo. Nato nel telegrafo del XIX secolo, il codice Q continua a essere uno strumento essenziale per gli operatori radio. Scopriamo insieme questo sistema che rende le nostre conversazioni più veloci e precise!
 
@@ -281,5 +281,5 @@ Testa le tue conoscenze sul codice Q!
 Il codice Q è molto più di un semplice sistema di abbreviazioni: è il linguaggio che unisce radioamatori di tutto il mondo. Dalla sua nascita nel telegrafo alla sua evoluzione digitale, continua a facilitare comunicazioni efficienti e precise. Imparare il codice Q significa diventare parte di una tradizione centenaria che rende l'etere più comprensibile per tutti! 📻💬
 
 ---
-[Torna al README](../README.md) | [Precedente: 10 Protezione Elettrica](../10_Protezione_Elettrica/10_Protezione_Elettrica.md) | [Successivo: 2 Abbreviazioni Operative](./2_Abbreviazioni_Operative.md)</content>
+[Torna al README](../README.md) | [Precedente: 1 Alfabeto Fonetico](./1_Alfabeto_Fonetico.md) | [Successivo: 3 Abbreviazioni Operative](./3_Abbreviazioni_Operative.md)</content>
 <parameter name="filePath">B_Operativa/1_Codice_Q.md

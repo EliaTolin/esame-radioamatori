@@ -1,4 +1,4 @@
-# B.5 Piani di Frequenze della IARU: L'Organizzazione dell'Etere 📻📊
+# B.6 Piani di Frequenze della IARU: L'Organizzazione dell'Etere 📻📊
 
 Benvenuti nel mondo organizzato dei piani di frequenze IARU! L'**International Amateur Radio Union** coordina l'uso armonioso delle bande radioamatoriali in tutto il mondo, prevenendo interferenze e massimizzando le opportunità di comunicazione. Scopriamo insieme questi piani dettagliati che rendono possibile l'ordine nell'etere caotico delle radiofrequenze!
 
@@ -406,5 +406,5 @@ Testa le tue conoscenze sui piani frequenze IARU!
 I piani di frequenze IARU sono la colonna portante dell'ordine radioamatoriale mondiale. Senza questi piani dettagliati, l'etere sarebbe un caos di interferenze e conflitti. Rispettandoli, contribuiamo tutti a mantenere un ambiente radio pulito ed efficiente, dove ogni radioamatore può trovare il suo spazio per esplorare l'eccitante mondo delle comunicazioni! 📻📊
 
 ---
-[Torna al README](../README.md) | [Precedente: 4 Indicativi di Chiamata](./4_Indicativi_Chiamata.md) | [Successivo: 1 Regolamento delle Radiocomunicazioni dell'UIT](../C_Regolamentazione/1_Regolamento_Radiocomunicazioni_UIT.md)</content>
+[Torna al README](../README.md) | [Precedente: 5 Indicativi di Chiamata](./5_Indicativi_Chiamata.md) | [Successivo: 1 Regolamento delle Radiocomunicazioni dell'UIT](../C_Regolamentazione/1_Regolamento_Radiocomunicazioni_UIT.md)</content>
 <parameter name="filePath">B_Operativa/5_Piani_Frequenze_IARU.md

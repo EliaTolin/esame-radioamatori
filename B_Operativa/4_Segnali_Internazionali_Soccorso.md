@@ -1,4 +1,4 @@
-# B.3 Segnali Internazionali di Soccorso: Quando l'Etere Salva Vite 🚨📻
+# B.4 Segnali Internazionali di Soccorso: Quando l'Etere Salva Vite 🚨📻
 
 Benvenuti nel mondo cruciale dei segnali di soccorso! Come radioamatori, abbiamo il privilegio e la responsabilità di essere parte del sistema globale di soccorso. I segnali di emergenza sono codici universali che possono salvare vite umane in situazioni di pericolo. Scopriamo insieme questi segnali vitali, le procedure di emergenza e il ruolo speciale dei radioamatori nelle catastrofi naturali!
 
@@ -326,5 +326,5 @@ Testa le tue conoscenze sui segnali internazionali di soccorso!
 I segnali internazionali di soccorso rappresentano il ponte tra la tecnologia radioamatoriale e il salvataggio di vite umane. Come radioamatori, siamo parte di una rete globale di solidarietà che può fare la differenza in momenti critici. Conoscere questi segnali, rispettare le procedure e prepararsi adeguatamente significa essere pronti a servire la comunità quando più ne ha bisogno. L'etere non è solo comunicazione, ma anche protezione e soccorso! 🚨📻
 
 ---
-[Torna al README](../README.md) | [Precedente: 2 Abbreviazioni Operative](./2_Abbreviazioni_Operative.md) | [Successivo: 4 Indicativi di Chiamata](./4_Indicativi_Chiamata.md)</content>
+[Torna al README](../README.md) | [Precedente: 3 Abbreviazioni Operative](./3_Abbreviazioni_Operative.md) | [Successivo: 5 Indicativi di Chiamata](./5_Indicativi_Chiamata.md)</content>
 <parameter name="filePath">B_Operativa/3_Segnali_Internazionali_Soccorso.md
