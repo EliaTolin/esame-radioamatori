@@ -1,4 +1,4 @@
-# B.2 Abbreviazioni Operative: La Lingua Concisa dei Radioamatori 📻🔤
+# B.3 Abbreviazioni Operative: La Lingua Concisa dei Radioamatori 📻🔤
 
 Benvenuti nel mondo delle abbreviazioni operative! Oltre al codice Q, i radioamatori utilizzano un ricco vocabolario di abbreviazioni per rendere le comunicazioni più rapide ed efficienti. Queste brevi sequenze di lettere permettono di esprimere concetti complessi in pochi caratteri, essenziale per le comunicazioni in tempo reale. Scopriamo insieme questo linguaggio che rende l'etere più fluido e comprensibile!
 
@@ -318,5 +318,5 @@ Testa le tue conoscenze sulle abbreviazioni operative!
 Le abbreviazioni operative sono il collante che tiene unite le comunicazioni radioamatoriali mondiali. Dalla loro origine telegrafica alla loro evoluzione digitale, continuano a rendere possibile lo scambio rapido e preciso di informazioni attraverso l'etere. Imparare questo linguaggio significa diventare cittadini dell'etere, capaci di comunicare efficacemente con radioamatori di ogni paese e cultura! 📻🔤
 
 ---
-[Torna al README](../README.md) | [Precedente: 1 Codice Q](./1_Codice_Q.md) | [Successivo: 3 Segnali Internazionali di Soccorso](./3_Segnali_Internazionali_Soccorso.md)</content>
+[Torna al README](../README.md) | [Precedente: 2 Codice Q](./2_Codice_Q.md) | [Successivo: 4 Segnali Internazionali di Soccorso](./4_Segnali_Internazionali_Soccorso.md)</content>
 <parameter name="filePath">B_Operativa/2_Abbreviazioni_Operative.md

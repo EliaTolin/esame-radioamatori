@@ -270,5 +270,5 @@ Testa le tue conoscenze sul Regolamento UIT!
 Il Regolamento delle Radiocomunicazioni dell'UIT fornisce il quadro globale per le attività radioamatoriali. Conoscere queste norme garantisce operazioni sicure, rispettose e legali in tutto il mondo. Come radioamatori, siamo ambasciatori della buona pratica nelle radiocomunicazioni! 📻🌍
 
 ---
-[Torna al README](../README.md) | [Precedente: 5 Piani di Frequenze della IARU](../B_Operativa/5_Piani_Frequenze_IARU.md) | [Successivo: 2 Regolamentazione della CEPT](./2_Regolamentazione_CEPT.md)</content>
+[Torna al README](../README.md) | [Precedente: 6 Piani di Frequenze della IARU](../B_Operativa/6_Piani_Frequenze_IARU.md) | [Successivo: 2 Regolamentazione della CEPT](./2_Regolamentazione_CEPT.md)</content>
 <parameter name="filePath">C_Regolamentazione/1_Regolamento_Radiocomunicazioni_UIT.md

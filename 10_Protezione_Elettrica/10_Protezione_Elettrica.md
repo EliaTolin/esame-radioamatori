@@ -309,5 +309,5 @@ Testa le tue conoscenze sulla protezione elettrica!
 La protezione elettrica è fondamentale per ogni radioamatore. Conoscere i rischi, applicare le protezioni appropriate e seguire procedure sicure permette di godere dell'hobby senza pericoli. Ricordate: la sicurezza non è negoziabile! ⚡🛡️
 
 ---
-[Torna al README](../README.md) | [Precedente: 9.3 Protezione contro i disturbi](../09_Disturbi_Protezione/9.3_Protezione_contro_i_disturbi.md) | [Successivo: 1 Codice Q](../B_Operativa/1_Codice_Q.md)</content>
+[Torna al README](../README.md) | [Precedente: 9.3 Protezione contro i disturbi](../09_Disturbi_Protezione/9.3_Protezione_contro_i_disturbi.md) | [Successivo: 1 Alfabeto Fonetico](../B_Operativa/1_Alfabeto_Fonetico.md)</content>
 <parameter name="filePath">10_Protezione_Elettrica/10_Protezione_Elettrica.md
